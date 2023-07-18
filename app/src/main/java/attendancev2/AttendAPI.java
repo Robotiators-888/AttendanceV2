@@ -1,7 +1,7 @@
 package attendancev2;
 
 public class AttendAPI {
-    
+    private RedisHandler redis;
     private AttendAPI instance = null;
 
     public AttendAPI getIntance() {
@@ -16,10 +16,11 @@ public class AttendAPI {
     }
 
     private AttendAPI(){
-
+        redis = new RedisHandler();
     }
 
     public String concatTime(String type, String dateTime){
+
         return type + ": " + dateTime;
     }
 
@@ -30,6 +31,8 @@ public class AttendAPI {
         return 0.0;
     }
 
-
+    public boolean writeToExcel(){
+        return true;
+    }
 
 }
