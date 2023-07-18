@@ -23,6 +23,9 @@ dependencies {
     // This dependency is used by the application.
     implementation 'redis.clients:jedis:4.4.3'
     implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'commons-io:commons-io:2.13.0'
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
+    implementation 'org.apache.commons:commons-lang3:3.0'
 }
 
 application {
