@@ -22,7 +22,6 @@ public class RedisHandler {
     public boolean logInOut(String id, boolean isLogin){
         jedis.select(0);
         System.out.println(jedis.set(id.toString(), ResponceBuilder.buildDataInput(isLogin, getName(id)).toString()));
-        jedis.save();
         
         return true;
     }
